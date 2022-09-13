@@ -1,0 +1,11 @@
+.main {
+  grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  grid-column: 1;
+}
+
+.right {
+  grid-column: 2;
+}
