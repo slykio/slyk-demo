@@ -1,0 +1,9 @@
+@layer components {
+  .field:first-child > input {
+    @apply rounded-t-md;
+  }
+
+  .field:last-child > input {
+    @apply rounded-b-md;
+  }
+}

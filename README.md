@@ -1,23 +1,30 @@
-# Next.js + Tailwind CSS Example
+# Slyk App Demo
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This demo application shows how you can leverage the
+[Slyk API](https://slyk.io/api) to build your coin-powered product or community.
 
-## Deploy your own
+This was built with [Next JS](https://nextjs.org/) and
+[Tailwind CSS](https://tailwindcss.com/), but following the principals used here
+you can use any other tech stack for your application.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+A step by step guide can be found on
+[our documentation](https://developers.slyk.io/slyk/).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Running this application
 
-## How to use
+You'll need at least Node v16 to run this application.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+You'll also need a Slyk API key. Create a `.env` file with the following:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+```
+SLYK_API_KEY=<your-api-key>
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+To run the application in development mode use:
+
+```sh
+yarn dev
+```
+
+To run in production mode first create a build with `yarn build` and then run it
+with `yarn start`.

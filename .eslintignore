@@ -1,0 +1,6 @@
+!.*rc.js
+!.storybook
+.next/
+next-env.d.ts
+coverage/
+/build/**
