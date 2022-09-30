@@ -29,8 +29,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const { req, res } = ctx;
   const slyk = createSlykClient({
     apikey: process.env.SLYK_API_KEY,
-    host: 'api.dev.seegno.net',
+    host: 'api.stg.slyk.io',
   });
+
   const session = new ServerSession(slyk, new Cookies(req, res));
   const token = await session.getToken();
 
