@@ -16,7 +16,7 @@ export default async function handler(
 
   const slyk = createSlykClient({
     apikey: process.env.SLYK_API_KEY,
-    host: 'api.dev.seegno.net',
+    host: 'api.stg.slyk.io',
   });
 
   const { email, password } = request.body;

@@ -13,8 +13,9 @@ export default async function handler(
 
   const slyk = createSlykClient({
     apikey: process.env.SLYK_API_KEY,
-    host: 'api.dev.seegno.net',
+    host: 'api.stg.slyk.io',
   });
+
   const { name, email, password } = request.body;
   const user = await slyk.user.create({
     name,
@@ -22,5 +23,6 @@ export default async function handler(
     password,
     verified: true,
   });
+
   response.status(200).json(user);
 }
