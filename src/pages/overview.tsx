@@ -98,8 +98,14 @@ function getAssetColor(
 }
 
 const Overview: NextPage<Props> = props => {
-  const { assets, defaultCurrency, rewardAsset, balances, featuredProducts } =
-    props;
+  const {
+    assets,
+    balances,
+    defaultCurrency,
+    featuredProducts,
+    rewardAsset
+  } = props;
+
   const user = useProfile() as User;
   const [isProductModalVisible, setProductModalVisible] = useState(false);
   const [product, setProduct] = useState<Product | null>();
@@ -132,6 +138,10 @@ const Overview: NextPage<Props> = props => {
                 </li>
               );
             })}
+
+            {balances.length === 0 && (
+              <h3 className='text-sm text-gray-700'>No balances to display.</h3>
+            )}
           </ul>
 
           <h2 className='text-2xl mt-8 mb-4'>Featured products</h2>
